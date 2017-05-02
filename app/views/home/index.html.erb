@@ -1,6 +1,6 @@
 <div class = "container">
-  <h1>Send Url</h1>
-
+  <div class = "request">
+    <h1>Send Url</h1>
     <div class = "form-group">
       <%= label_tag :url %>
       <%= text_field_tag(:url, nil, class: "form-control", required: true) %>
@@ -24,13 +24,23 @@
     <div class = "form-group">
       <%= link_to 'SEND API CALL', '#', id:"send-api", class: 'btn btn btn-primary' %>
     </div>
+  </div>
+  <div class = "response">
+    <h1>Response</h1>
     <div class = "form-group">
       <strong>HTTP RESPONSE STATUS</strong>
       <p id = "res-status"></p>
+    </div>
+    <div class = "form-group">
       <strong>RESPONSE BODY</strong>
-      <textarea id = "res-body" class="form-control", readonly="true" rows = "10"></textarea>
+      <textarea id = "res-body" class="form-control", readonly="true" rows = "20"></textarea>
+    </div>
+    <div class = "form-group">
       <strong>HEADERS</strong>
-      <textarea id = "res-headers" class="form-control", readonly="true" rows = "9"></textarea>
+      <textarea id = "res-headers" class="form-control", readonly="true" rows = "10"></textarea>
+    </div>
+    <div class = "form-group">
       <%= link_to 'SEND ANOTHER', '#', id:"another-api", class: 'btn btn btn-primary' %>
     </div>
+  </div>
 </div>

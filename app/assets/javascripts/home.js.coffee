@@ -4,24 +4,16 @@
 
 $ ->
   makeRespone = (request) ->
-    $("#send-api").hide()
-    $("#another-api").show()
-    $("#res-status").show()
-    $("#res-body").show()
-    $("#res-headers").show()
-    $("strong").show()
+    $(".response").show()
+    $(".request").hide()
 
     $("#res-status").text request.status + ":" + request.statusText
     $("#res-body").text request.responseText          
     $("#res-headers").text request.getAllResponseHeaders()
   anotherAPI = ( ) ->
 
-    $("#send-api").show()
-    $("#res-status").hide()
-    $("#res-body").hide()
-    $("#res-headers").hide()
-    $("strong").hide()
-    $("#another-api").hide()
+    $(".response").hide()
+    $(".request").show()
 
   anotherAPI()
 
